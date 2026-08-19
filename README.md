@@ -54,7 +54,7 @@ Add a cron job to update the queue count every minute:
 
 Bash
 
-_* * * * * /usr/sbin/exim -bpc > /home/username/public_html/queue_count.txt 2>&1
+* * * * * /usr/sbin/exim -bpc > /home/username/public_html/queue_count.txt 2>&1
 _
 (Adjust the absolute path to point to your script's directory).
 
