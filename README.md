@@ -61,7 +61,7 @@ Bash
 
 And here is **Part 2** (Installation, Compilation, and Usage):
 
-## Installation & Compilation
+## Installation
 
 ### Requirements
 
