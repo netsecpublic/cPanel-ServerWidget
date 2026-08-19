@@ -32,7 +32,7 @@ Upload `queue.php` to a web-accessible directory on your server (e.g., `https://
 Open `queue.php` and set your secret token:
 ```php
 $secret_token = "YOURPASSWORD123"; // Must match your widget's Auth Token
-
+```
 ###  3. Cron Job Configuration (Required for Exim Mail Queue if shell_exec is blocked)
 If your server's PHP configuration blocks shell_exec(), the script reads a local queue_count.txt fallback file.
 
@@ -47,18 +47,15 @@ Log into your server via SSH as root.
 Open the root crontab editor:
 
 Bash
-crontab -e
+```crontab -e```
 Add a cron job to update the queue count every minute:
 
 Bash
-* * * * * /usr/sbin/exim -bpc > /home/username/public_html/queue_count.txt 2>&1
+```* * * * * /usr/sbin/exim -bpc > /home/username/public_html/queue_count.txt 2>&1```
 (Adjust the absolute path to point to your script's directory).
 
 
 And here is **Part 2** (Installation, Compilation, and Usage):
-
-```markdown
----
 
 ## Installation & Compilation
 
